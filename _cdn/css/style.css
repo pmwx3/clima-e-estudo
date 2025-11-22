@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: #E2EAF5;
+}
+
+body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+    grid-column-gap: 100px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-container>img {
+    margin-right: 20px;
+    max-width: 222px;
+    height: auto;
+}
+
+/* show case  */
+
+.showcase-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 60px;
+}
+
+.showcase-container .showcase-text>h2:first-child {
+    color: #2a394f;
+    font-weight: 700;
+    font-size: 3.125rem;
+}
+
+.showcase-container .showcase-text>h2:last-child {
+    color: #2a394f;
+    font-weight: 700;
+    font-size: 5.125rem;
+}
+
+.showcase-container .showcase-text>p {
+    color: #9aa0a8;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* end show case */
+
+/* Previsão por hora */
+
+.hourly-forecast-container {
+    background: linear-gradient(90.28deg, #007dfe 0.22%, #3aa2ff 99.76%);
+    box-shadow: 0px 30px 50px -19px rgba(1, 126, 254, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-forecast-container .hour-wheter-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourly-forecast-container .hour-wheter-item>img {
+    width: 70px;
+    height: 70px;
+}
+
+.hourly-forecast-container .hour-wheter-item>p:first-child {
+    color: #FFF;
+    opacity: 75%;
+    font-weight: 500;
+}
+
+.hourly-forecast-container .hour-wheter-item>p:last-child {
+    color: #FFF;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* end previsão por hora  */
+
+/* detalhes */
+.weather-details-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    grid-column-gap: 15px;
+}
+
+.weather-details-container .weather-detail-item {
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-details-container .weather-detail-item>p:first-child {
+    color: #8f8f8f;
+}
+
+.weather-details-container .weather-detail-item>div {
+    display: flex;
+    align-items: center;
+}
+
+.weather-details-container .weather-detail-item>div>p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2a394f;
+    margin-left: 4px;
+}
+
+.weather-details-container .weather-detail-item>div>p>span {
+    font-size: 0.75rem;
+    margin-left: -5px;
+}
+
+.weather-details-container .weather-detail-item>div>img {
+    width: 35px;
+    height: 35px;
+}
+
+/* fim detalhes  */
+
+/* previsão semanal  */
+
+.weekly-forecast-container {
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 40px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weekly-forecast-container .day-weather-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weekly-forecast-container .day-weather-item>p,
+.weekly-forecast-container .day-weather-item>img,
+.weekly-forecast-container .day-weather-item>div {
+    flex: 1;
+}
+
+.weekly-forecast-container .day-weather-item>p {
+    font-weight: 500;
+    color: #8f8f8f;
+}
+
+.weekly-forecast-container .day-weather-item>div {
+    display: flex;
+    align-items: center;
+}
+
+.weekly-forecast-container .day-weather-item>div>p:first-child {
+    color: #2a394f;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.weekly-forecast-container .day-weather-item>div>p:last-child {
+    color: #8f8f8f;
+    font-weight: 500;
+}
+
+.weekly-forecast-container .day-weather-item>img {
+    width: 70px;
+    height: 70px;
+}
+
+/* fim previsão semanal */
+
+/* Utilities */
+
+.custom-input {
+    border: none;
+    border-radius: 15px;
+    background-color: #FDFFFE;
+    color: #232323;
+    padding: 16px;
+    width: 100%;
+}
+
+.custom-input:focus {
+    outline: 2px solid #3aa2ff
+}
+
+.custom-input::placeholder {
+    color: #b1b8c0;
+}
