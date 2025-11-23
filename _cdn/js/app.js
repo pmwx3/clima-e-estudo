@@ -56,3 +56,32 @@ function atualizarDadosAtuais(data) {
     currentWeather.uv_index
   );
 }
+
+//Função para gerar a previsão por hora
+function atualizarPrevisaoHoraria(data) {
+  const container = document.getElementById("hourly-forecast");
+  container.innerHTML = ""; // limpa o container antes de adicionar novos itens
+
+  const hourly = data.hourly;
+  const agora = new Date();
+  const horaAtual = agora.getHours();
+
+  const startIndex = hourly.time.findIndex(
+    (time) => new Date(time).getHours() === horaAtual
+  );
+
+  for (let i = startIndex; i < startIndex + 6; i++) {
+    const hora = new Date(hourly.time[i]);
+    const temperatura = Math.round(hourly.temperature_2m[i]);
+
+    // cria o HTML para cada item da previsão
+    const itemHtml = `
+            <div class="hour-weather-item">
+            <p>${hora.getHours()}:00</p>
+            <img src="_cdn/img/sun-clouds.svg" alt="" title="" >
+            <p>${temperatura}°</p>
+        `;
+    // adiciona o item criado ao container
+    container.innerHTML += itemHtml;
+  }
+}
