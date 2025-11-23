@@ -26,14 +26,14 @@
 
             <div class="showcase-container">
                 <div class="showcase-text">
-                    <h2>Sengés - PR</h2>
-                    <p>Chance de chuva 0%</p>
-                    <h2>28°</h2>
+                    <h2 id="city-name">--</h2>
+                    <p id="chance-of-rain-main">Chance de chuva --%</p>
+                    <h2 id="current-temp">--°</h2>
                 </div>
                 <img src="_cdn/img/sun-clouds.svg" alt="Sol com poucas nuvens" title="Sol com poucas nuvens">
             </div>
 
-            <div class="hourly-forecast-container">
+            <div class="hourly-forecast-container" id="hourly-forecast">
                 <div class="hour-wheter-item">
                     <p>6:00 AM</p>
                     <img src="_cdn/img/sun-cloud.svg" alt="" title="">
@@ -71,28 +71,28 @@
                     <p>Sesação Térmica</p>
                     <div>
                         <img src="_cdn/img/temperature.svg">
-                        <p>30°</p>
+                        <p id="apparent-temp">--°</p>
                     </div>
                 </div>
                 <div class="weather-detail-item">
                     <p>Chance de chuva</p>
                     <div>
                         <img src="_cdn/img/rain.svg">
-                        <p>0%</p>
+                        <p id="rain-chance">--%</p>
                     </div>
                 </div>
                 <div class="weather-detail-item">
                     <p>Vento</p>
                     <div>
                         <img src="_cdn/img/wind.svg">
-                        <p>2 <span>km/h</span></p>
+                        <p><span id="wind-speed">--</span> <span>km/h</span></p>
                     </div>
                 </div>
                 <div class="weather-detail-item">
                     <p>índice UV</p>
                     <div>
                         <img src="_cdn/img/sun-icon.svg">
-                        <p>4</p>
+                        <p id="uv-index">--</p>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
         </div>
 
         <div class="right-column">
-            <div class="weekly-forecast-container">
+            <div class="weekly-forecast-container" id="weekly-forecast">
                 <div class="day-weather-item">
                     <p>Domingo</p>
                     <img src="_cdn/img/rain2.svg" alt="" title="">
@@ -162,6 +162,9 @@
         </div>
 
     </div>
+
+    <!-- o defer é para garantirmos que o HTML seja carregado antes do JS  -->
+    <script src="_cdn/js/app.js" defer></script>
 </body>
 
 </html>
